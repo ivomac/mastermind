@@ -1,0 +1,27 @@
+[project]
+name = "mastermind"
+version = "0.1.0"
+description = "A Mastermind game implementation in Python."
+authors = [
+    { name = "Ivo Maceira", email = "ivomaceira@gmail.com" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+
+[project.scripts]
+mastermind = "mastermind.__main__:main"
+
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.ruff]
+line-length = 100
+indent-width = 4
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "D", "I", "N", "S", "T", "UP", "B", "SIM", "R"]
+ignore = ["B019", "S603", "S607", "T201"]
+
+
